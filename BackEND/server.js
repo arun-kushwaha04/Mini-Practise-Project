@@ -33,9 +33,6 @@ server.post('/addUser', (req, res) => {
     const userKey = req.body.userKey;
     const secretKey = req.body.secretKey;
     if (secretKey == '1234' && userKey == 'arun') {
-        // const newUser = req.body.newUser;
-        // data.push(newUser);
-        // res.send(data);
         client.query(`INSERT INTO users (username, email) values ('${req.body.newUser.username}', '${req.body.newUser.email}');`, (err, data) => {
             if (err) {
                 console.log(err);
