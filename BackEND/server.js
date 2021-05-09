@@ -6,7 +6,6 @@ const client = require('./db');
 
 const server = express();
 const port = process.env.PORT || 5000;
-//const middleware = require('./middleware');
 
 server.use(cors());
 server.use(express.json());
